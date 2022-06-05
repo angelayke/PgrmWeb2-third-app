@@ -34,7 +34,7 @@ code {
 }
 
 .container {
-  width: 100%;
+  width: 60%;
   max-width: var(--min-width);
   border-radius: 2rem;
   background-color: var(--dark-blue);
@@ -47,25 +47,50 @@ code {
 }
 
 .button {
+  border: solid 0px;
   border-radius: 50%;
-  background-color: var(--light-grey);
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.button-submit {
+  display: grid;
+  place-items: center;
+  background-color: var(--orange);
+  border: solid 0px;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  color: white;
 }
 
 .image {
   display: block;
   max-width: 100%;
+  border: solid 0px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
   height: auto;
   border-radius: 1rem;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   padding: 1rem 0;
 }
 
 .p{
-  font-size: 1.5rem;
+  color: var(--light-grey);
+  font-size: 0.8rem;
   text-align: left;
   padding: 1rem 0;
+}
+
+.flex-btn{
+  display: flex;
+  justify-content: space-between;
 }
