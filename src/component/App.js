@@ -1,6 +1,5 @@
 import IconStar from '../images/icon-star.svg';
 
-
 import Container from './Container';
 import Button from './Button';
 import Text from './Text';
