@@ -1,23 +1,23 @@
 import React from 'react'
 
 const Button = ({ as = "button", children}) => {
-  switch (as){
-    case "button-submit":
-         return <button className={as}>{children}</button>;
-    default:
-         return <button className={as}>{children}</button>;
-  }
-
   const handleButtonClick = (event) => {
     console.log(event.target);
-}
+};
 
-  return (
-  <button className='button' onClick={handleButtonClick}>{children}</button>
-)
-}
-  
+  switch (as){
+    case "button-submit":
+         return (<button type="submit" onClick={handleButtonClick} className={as}>
+          {children}
+          </button>
+          );
+    default:
+         return (
+          <button type="button" onClick={handleButtonClick} className={as}>
+          {children}
+          </button>
+         );
+  }
+};
 
-
-
-export default Button
+export default Button;
