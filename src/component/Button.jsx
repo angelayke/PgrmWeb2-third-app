@@ -1,23 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Button = ({ as = "button", children}) => {
-  const handleButtonClick = (event) => {
-    console.log(event.target);
-};
+const Button = ({ as, onClick, classOnHover, children}) => {
+  const [isHovered, setisHovered] = useState(false);
 
-  switch (as){
-    case "button-submit":
-         return (<button type="submit" onClick={handleButtonClick} className={as}>
-          {children}
-          </button>
-          );
-    default:
-         return (
-          <button type="button" onClick={handleButtonClick} className={as}>
-          {children}
-          </button>
-         );
-  }
+  //On change le state de isHovered à true
+  const onMouseEnter = () => setisHovered(true);
+
+  //On change le state de isHovered à false
+  const onMouseLeave = () => setisHovered(false);
+
+  const className = `button ${as ? as : ''} ${isHovered ? classOnHover : ""}`;
+
+return (
+  <button
+  onClick={onClick}
+  className = {className}
+  onMouseEnter = {onMouseEnter}
+  onMouseLeave = {onMouseLeave}
+  >
+      {children}
+  </button>)
 };
 
 export default Button;

@@ -4,8 +4,12 @@ import Container from './Container';
 import Button from './Button';
 import Text from './Text';
 import Image from './Image';
+import ButtonState from './ButtonState';
 
 function App() {
+  const handleClick = (event) => {
+    console.log(event.target.value);
+  }
   return (
     <div>
     <Container>
@@ -19,16 +23,15 @@ function App() {
         to help us improve our offering!
       </Text>
       <div className="flex-btn">
-        <Button>1</Button>
+        <Button onClick={handleClick} classOnHover='hover-button'>1</Button>
         <Button>2</Button>
         <Button>3</Button>
         <Button>4</Button>
         <Button>5</Button>
       </div>
      
-      <Button as="button-submit">
-        SUBMIT
-      </Button>
+      <Button as='submit' classOnHover='hover-submit'>SUBMIT</Button>
+      <Button classOnHover='hover-return'>Retour</Button>
      
     </Container>
   </div>

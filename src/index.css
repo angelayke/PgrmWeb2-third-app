@@ -54,6 +54,11 @@ code {
   color: white;
 }
 
+.hover-btn {
+  background-color: var(--orange);
+  color: white;
+}
+
 .button-submit {
   display: grid;
   place-items: center;
@@ -64,6 +69,12 @@ code {
   width: 100%;
   padding: 10px;
   color: white;
+}
+
+.hover-sbmt {
+  background-color: var(--white);
+  color: var(--orange);
+  font-weight: bold;
 }
 
 .image {
