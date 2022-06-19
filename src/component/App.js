@@ -4,7 +4,6 @@ import Container from './Container';
 import Button from './Button';
 import Text from './Text';
 import Image from './Image';
-import ButtonState from './ButtonState';
 
 function App() {
   const handleClick = (event) => {
