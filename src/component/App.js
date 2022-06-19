@@ -23,15 +23,14 @@ function App() {
         to help us improve our offering!
       </Text>
       <div className="flex-btn">
-        <Button onClick={handleClick} classOnHover='hover-button'>1</Button>
-        <Button>2</Button>
-        <Button>3</Button>
-        <Button>4</Button>
-        <Button>5</Button>
+        <Button as='button' onClick={handleClick} classOnHover='hover-btn'>1</Button>
+        <Button as='button' onClick={handleClick} classOnHover='hover-btn'>2</Button>
+        <Button as='button' onClick={handleClick} classOnHover='hover-btn'>3</Button>
+        <Button as='button' onClick={handleClick} classOnHover='hover-btn'>4</Button>
+        <Button as='button' onClick={handleClick} classOnHover='hover-btn'>5</Button>
       </div>
      
-      <Button as='submit' classOnHover='hover-submit'>SUBMIT</Button>
-      <Button classOnHover='hover-return'>Retour</Button>
+      <Button as='button-submit' classOnHover='hover-sbmt'>SUBMIT</Button>
      
     </Container>
   </div>
